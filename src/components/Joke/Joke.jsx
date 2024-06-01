@@ -2,8 +2,8 @@ import { useState } from 'react';
 import './Joke.css';
 
 export const Joke = ({ userAvatar, userName, text, likes, dislikes }) => {
-  const [likes, setLikes] = useState(0);
-  const [dislikes, setDislikes] = useState(0);
+  const [likesUp, setLikesUp] = useState(0);
+  const [dislikesDown, setDislikesDown] = useState(0);
 
   return (
     <div className="container">
@@ -18,7 +18,7 @@ export const Joke = ({ userAvatar, userName, text, likes, dislikes }) => {
         </div>
         <div className="joke__likes">
           <button
-            onClick={() => setLikes(likes + 1)}
+            onClick={() => setLikesUp(likesUp + 1)}
             id="btn-up"
             className="btn-like btn-like--up"
           ></button>
@@ -26,7 +26,7 @@ export const Joke = ({ userAvatar, userName, text, likes, dislikes }) => {
             {likes}
           </span>
           <button
-            onClick={() => setDislikes(dislikes + 1)}
+            onClick={() => setDislikesDown(dislikesDown + 1)}
             id="btn-down"
             className="btn-like btn-like--down"
           ></button>

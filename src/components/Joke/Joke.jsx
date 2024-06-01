@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import './Joke.css';
 
 export const Joke = ({}) => {
   const [likes, setLikes] = useState(0);
